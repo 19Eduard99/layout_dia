@@ -4,15 +4,21 @@
 @import './components/aside-menu';
 @import './components/menu';
 @import './components/swiper';
+@import './components/about-us';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background: $c-gray;
+}
+
+main {
+  padding: 120px 0;
 }
 
 .lock-scroll {
