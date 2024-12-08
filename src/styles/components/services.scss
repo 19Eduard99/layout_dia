@@ -1,20 +1,41 @@
 .services {
   padding: 120px 0;
+  font-family: $font-primary;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     gap: 48px;
+
+    @include on-tablet {
+      justify-content: center;
+      gap: 56px;
+    }
+
+    @include on-big-tablet {
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
+
+    @include on-tablet {
+      max-width: 266px;
+    }
+
+    @include on-big-tablet {
+      max-width: 294px;
+    }
+
+    @include on-desktop {
+      max-width: 365px;
+    }
   }
 
   &__subtitle {
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 700;
     font-size: 13px;
     line-height: 20px;
@@ -22,64 +43,126 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 16px;
-    color: #c0cdd7;
+    color: $subtitle-color;
   }
 
   &__title {
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 600;
     font-size: 32px;
     line-height: 130%;
     margin-bottom: 24px;
-    color: #253757;
+    color: $color-title;
   }
 
   &__text {
-    font-family: 'Open Sans';
-    font-style: normal;
+    font-family: $font-secondary;
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
-    color: #6c788b;
+    color: $main-text-color;
   }
 
   &__items {
-    display: flex;
+    @extend %flex-center-between;
+
     flex-direction: column;
     gap: 24px;
+
+    @include on-tablet {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    @include on-big-tablet {
+      max-width: 50%;
+      row-gap: 0;
+      justify-content: flex-end;
+    }
   }
 
   &__item {
-    background: #fff;
+    background: $white;
     border-radius: 16px;
     padding: 32px;
+    width: 100%;
+
+    @include on-tablet {
+      width: calc(50% - 24px);
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        align-self: flex-start;
+        margin-top: -103px;
+      }
+    }
+
+    @include on-big-tablet {
+      &:nth-child(1),
+      &:nth-child(3) {
+        align-self: flex-start;
+        margin-top: 24px;
+      }
+    }
 
     span {
       @extend %flex-center-between;
+
       justify-content: center;
       width: 46px;
       height: 24px;
       background-color: #e9f0ff;
       border-radius: 23px;
-      font-family: 'Poppins';
-      font-style: normal;
       font-weight: 600;
       font-size: 13px;
       line-height: 20px;
       margin-bottom: 24px;
-      color: #2060f6;
+      color: $color-link-bg;
     }
   }
 
   &__item-text {
-    font-family: 'Open Sans';
-    font-style: normal;
+    font-family: $font-secondary;
     font-weight: 600;
     font-size: 13px;
     line-height: 150%;
-    color: #6c788b;
+    color: $main-text-color;
     margin-bottom: 32px;
     max-width: 200px;
+  }
+
+  &__item-link {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    max-width: 143px;
+    color: $color-text-dark;
+    transition: all 0.3s;
+
+    @extend %flex-center-between;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $color-link-bg;
+      background-image: url('../images/services/arrow.svg');
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: $color-link-bg;
+      transform: scale(1.1);
+    }
+  }
+
+  @include on-big-tablet {
+    padding-top: 250px;
   }
 }

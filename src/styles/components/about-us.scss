@@ -9,7 +9,7 @@
     margin-bottom: 24px;
     font-weight: 600;
     line-height: 150%;
-    color: #253757;
+    color: $color-title;
   }
 
   &__text {
@@ -17,7 +17,7 @@
     font-size: 22px;
     font-weight: 600;
     line-height: 150%;
-    color: #6c788b;
+    color: $main-text-color;
   }
 
   @include on-tablet {

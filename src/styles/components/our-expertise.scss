@@ -1,5 +1,5 @@
 .our-expertise {
-  background-color: #fff;
+  background-color: $white;
   border-radius: $border-radius;
   padding: 72px 0;
   text-align: center;
@@ -11,7 +11,7 @@
     font-size: 44px;
     line-height: 120%;
     margin-bottom: 56px;
-    color: #253757;
+    color: $color-title;
 
     @include on-tablet {
       margin-bottom: 64px;
@@ -53,7 +53,7 @@
     font-size: 20px;
     line-height: 140%;
     margin-bottom: 16px;
-    color: #253757;
+    color: $color-title;
   }
 
   &__article-text {
@@ -62,7 +62,7 @@
     font-size: 14px;
     line-height: 150%;
     text-align: center;
-    color: #6c788b;
+    color: $main-text-color;
 
     @include on-tablet {
       max-width: 362px;
