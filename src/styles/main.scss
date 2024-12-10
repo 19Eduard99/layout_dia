@@ -7,6 +7,9 @@
 @import './components/about-us';
 @import './components/our-expertise';
 @import './components/services';
+@import './components/testimonials';
+@import './components/apply';
+@import './components/footer';
 
 * {
   margin: 0;
@@ -17,10 +20,15 @@
 
 body {
   background: $c-gray;
+  height: calc(100vh - 40px);
 }
 
 main {
   padding: 120px 0;
+
+  @include on-tablet {
+    padding-bottom: 0;
+  }
 }
 
 .lock-scroll {
