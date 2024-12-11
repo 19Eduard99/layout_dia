@@ -4,9 +4,10 @@
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
   padding: 72px 0 80px;
+  position: relative;
+  overflow-x: hidden;
 
   @include on-tablet {
-    position: relative;
     top: -40px;
   }
 
@@ -212,6 +213,37 @@
     &:hover::before {
       width: 100%;
       left: 0;
+    }
+  }
+
+  .alert {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 15px;
+    font-size: 20px;
+    line-height: 1.5;
+    top: 20px;
+    transform: translateX(150%);
+    transition: all 0.5s ease;
+    right: 0;
+
+    &-success {
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+    }
+
+    &-icon {
+      margin-right: 15px;
+      background-image: url('../images/footer/success.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
     }
   }
 }

@@ -1,7 +1,7 @@
 .testimonials {
   font-family: $font-primary;
   padding-bottom: 120px;
-  
+
   &__subtitle {
     font-weight: 700;
     font-size: 13px;
@@ -45,6 +45,8 @@
     border-radius: 16px;
     text-align: center;
     padding: 32px 37px;
+
+    @include card-hover-effect;
 
     img {
       display: block;

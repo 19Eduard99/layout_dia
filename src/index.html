@@ -485,10 +485,20 @@
           </div>
           <div class="testimonials__inner">
             <article class="testimonials__article">
-              <img
-                src="./images/testimonials/tal-gilad.png"
-                alt="Tal Gilad"
-              />
+              <picture>
+                <source
+                  srcset="./images/testimonials/tal-gilad.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./images/testimonials/tal-gilad.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./images/testimonials/tal-gilad.png"
+                  alt="Tal Gilad"
+                />
+              </picture>
 
               <blockquote class="testimonials__quote">
                 AIR’s ideas are refreshing and out of the box. Authentic team
@@ -499,10 +509,20 @@
             </article>
 
             <article class="testimonials__article">
-              <img
-                src="./images/testimonials/azadeh-hawkins.png"
-                alt="Azadeh Hawkins"
-              />
+              <picture>
+                <source
+                  srcset="./images/testimonials/azadeh-hawkins.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./images/testimonials/azadeh-hawkins.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./images/testimonials/azadeh-hawkins.png"
+                  alt="Azadeh Hawkins"
+                />
+              </picture>
 
               <blockquote class="testimonials__quote">
                 AIR is an exceptional agency that leads with creative talent,
@@ -513,10 +533,20 @@
             </article>
 
             <article class="testimonials__article">
-              <img
-                src="./images/testimonials/michel-grover.png"
-                alt="Michel Grover"
-              />
+              <picture>
+                <source
+                  srcset="./images/testimonials/michel-grover.avif"
+                  type="image/avif"
+                />
+                <source
+                  srcset="./images/testimonials/michel-grover.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./images/testimonials/michel-grover.png"
+                  alt="Michel Grover"
+                />
+              </picture>
 
               <blockquote class="testimonials__quote">
                 AIR raises the agency bar to stratospheric heights on both
@@ -553,6 +583,16 @@
       class="footer"
     >
       <div class="container">
+        <div
+          class="alert alert-success"
+          role="alert"
+        >
+          <div class="alert-icon"></div>
+          <div class="alert-content">
+            Thank you for contacting us. We will get back to you as soon as
+            possible.
+          </div>
+        </div>
         <div class="footer__inner">
           <form
             class="footer__form"
@@ -564,6 +604,7 @@
                 id="email"
                 type="email"
                 placeholder="Your email"
+                autocomplete="email"
                 required
               />
             </label>
@@ -573,6 +614,7 @@
                 id="name"
                 type="text"
                 placeholder="Your name"
+                autocomplete="name"
                 required
               />
             </label>

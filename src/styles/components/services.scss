@@ -86,6 +86,8 @@
     padding: 32px;
     width: 100%;
 
+    @include card-hover-effect;
+
     @include on-tablet {
       width: calc(50% - 24px);
 
