@@ -50,13 +50,18 @@
       padding-bottom: 18px;
       border: none;
       border-bottom: 2px solid $white;
-      overflow: hidden;
+      overflow: auto;
       transition: all 0.4s;
+      scrollbar-width: none;
 
       &:active,
       &:focus {
         border-color: $color-link-bg;
       }
+    }
+
+    textarea::-webkit-scrollbar {
+      display: none;
     }
 
     @include on-tablet {
